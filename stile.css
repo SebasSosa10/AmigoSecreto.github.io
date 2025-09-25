@@ -1,69 +1,163 @@
-/* Centrar todo el contenido */
-body {
-  display: flex;
-  flex-direction: column; /* títulos arriba */
-  justify-content: center; /* centra horizontal si hay flex */
-  align-items: center; /* centra vertical */
-  min-height: 100vh; /* ocupa toda la altura */
-  margin: 0;
-  background-color: #f5f5f5; /* opcional */
+:root{
+  /* Paleta "Amor y Amistad" (no navideña) */
+  --bg:#0b1020;          /* azul profundo */
+  --surface:#0e162a;     /* base oscura */
+  --card:#111a30;
+  --accent:#fbbf24;      /* amarillo cálido */
+  --accent-2:#ef4444;    /* rojo coral */
+  --accent-3:#3b82f6;    /* azul vivo */
+  --text:#e5e7eb;
+  --muted:#9aa6c0;
+  --border:#1e2a44;
+  --ring:#ffffff33;
 }
 
-/* Centrar títulos */
-h1, h2, h3 {
-  text-align: center;
-  margin: 10px 0;
+/* Reset mínimo */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
+  color:var(--text);
+  background:
+    radial-gradient(1200px 600px at 10% -20%, #15203b 0%, transparent 60%),
+    radial-gradient(900px 500px at 110% -10%, #15203b 0%, transparent 50%),
+    var(--bg);
 }
 
-/* Contenedor principal */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+/* Header */
+.header{
+  text-align:center;
+  padding:26px 16px 12px;
+  position:relative;
 }
+.header h1{
+  margin:0 0 6px;
+  font-size: clamp(28px, 4vw, 40px);
+  letter-spacing:.3px;
+}
+.header p{margin:0;color:var(--muted)}
+.ribbon{
+  height:8px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+  border-bottom:1px solid #ffffff22;
+  border-top:1px solid #00000066;
+}
+
+/* Layout */
+.wrapper{max-width:1100px;margin:0 auto;padding:8px 16px 48px}
+
+/* Cards / reglas */
+.rules{
+  display:grid;gap:12px;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  margin:18px 0 26px;
+}
+.card{
+  background:linear-gradient(180deg, var(--surface), #0a1224);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:16px;
+  box-shadow: 0 10px 30px #0006, inset 0 1px 0 #ffffff10;
+}
+.card h3{margin:0 0 6px;font-size:18px}
+.badge{
+  display:inline-block;padding:4px 10px;border-radius:999px;
+  background:#121b32;border:1px solid #243459;color:#dbe3f1;font-size:12px
+}
+.badge.ghost{background:transparent;border-color:#2a3d66;color:#c7d1e5}
+.pair{display:flex;gap:10px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:14px}
+.list{margin:6px 0 0 16px; padding:0 0 0 6px; line-height:1.7}
+.muted{margin:8px 0 0;color:var(--muted);font-size:13px}
+
+/* Personas */
+.person{margin:24px 0 36px;display:grid;gap:16px}
+.person-header{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap
+}
+.person-header h2{margin:0;font-size:22px}
+.meta{color:var(--muted);font-size:14px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
 
 /* Carrusel */
-.carousel {
-  position: relative;
-  width: 520px; /* ancho del carrusel */
-  margin: 0 auto;
-  overflow: hidden;
-  text-align: center;
+.carousel{
+  position:relative;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:14px 44px;
+  overflow:hidden;
+  box-shadow: 0 12px 40px #0007, inset 0 1px 0 #ffffff10;
+}
+.carousel-viewport{overflow:hidden}
+.carousel-track{display:flex;transition: transform .4s ease}
+.slide{
+  min-width:100%;
+  display:grid;gap:12px;
+  grid-template-columns: 1fr;
+}
+.product{
+  display:grid;gap:14px;
+  grid-template-columns: minmax(240px, 520px);
+  justify-content:center;
+  justify-items:center;
+  text-align:center;
+}
+.product img{
+  width:100%;height:auto;max-height:420px;object-fit:cover;border-radius:12px;
+  border:1px solid #273555;
+  box-shadow:0 6px 18px #0008;
+  user-select:none
+}
+.info h3{margin:0 0 6px}
+.price{font-weight:700;font-size:18px}
+.colors{font-size:14px;color:var(--muted)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.btn{
+  background:linear-gradient(180deg,#1a2544,#141f3a);
+  border:1px solid #2a3a59;color:#e2e8f0;
+  padding:8px 12px;border-radius:10px;cursor:pointer;font-weight:600
+}
+.btn:hover{filter:brightness(1.06)}
+.btn.ghost{background:transparent;border-color:#3a4f7a}
+
+.arrow{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:36px;height:36px;border-radius:50%;
+  border:1px solid #2a3a59;background:#0f162a;display:grid;place-items:center;
+  cursor:pointer;user-select:none
+}
+.arrow:focus{outline:2px solid var(--ring)}
+.prev{left:10px} .next{right:10px}
+
+/* Dots */
+.dots{display:flex;gap:8px;justify-content:center;margin:12px 0 2px}
+.dot{
+  width:8px;height:8px;border-radius:50%;
+  background:#2a3a59;border:1px solid #3b4f7a;
+  transition:transform .2s ease, background .2s ease
+}
+.dot.active{background:var(--accent);transform:scale(1.2)}
+
+/* Modo sorpresa */
+.surprise .hideable{filter: blur(5px);opacity:.6;transition:filter .2s ease, opacity .2s ease}
+.surprise.revealed .hideable{filter:none;opacity:1}
+
+.toggle{display:flex;gap:10px;align-items:center;cursor:pointer;user-select:none}
+.switch{
+  width:42px;height:24px;border-radius:999px;background:#1a2641;position:relative;border:1px solid #2b3e66
+}
+.knob{
+  position:absolute;inset:2px auto 2px 2px;width:20px;height:20px;border-radius:50%;
+  background:#e5e7eb;transition:left .2s ease
+}
+.switch.on .knob{left:20px}
+
+/* Responsive */
+@media (min-width: 760px){
+  .slide{grid-template-columns: 1.2fr .8fr;align-items:center}
+  .product{text-align:left;justify-items:start}
 }
 
-.carousel-track {
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.carousel-slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.carousel button.prev,
-.carousel button.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 2;
-  font-size: 24px;
-}
-
-.carousel button.prev {
-  left: 0;
-}
-
-.carousel button.next {
-  right: 0;
-}
+/* Footer */
+.footer{color:#7f8fb0;text-align:center;padding:24px 0 40px;font-size:12px}

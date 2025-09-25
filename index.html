@@ -1,122 +1,326 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrusel Centrado</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amigo Secreto </title>
   <link rel="stylesheet" href="stile.css">
 </head>
 <body>
-  <h1>Amigo secreto</h1>
-  <h2>Planeación y Verificación del mantenimiento</h2>
-  <h3>JOAN SEBASTIAN SOSA BEDOYA</h3>
+<canvas id="confetti"></canvas>
 
-  <section id="proyectos" class="container">
-    <h2>Camibuzo</h2>
-    <h3>Tienda donde lo puede encontrar: Arturo Calle</h3>
-    <h4>Talla: M</h4>
-    <div class="carousel">
-      <button class="prev">&#10094;</button>
-      <div class="carousel-track-container">
+<header class="header">
+  <h1>Amigo Secreto </h1>
+</header>
+
+<div class="wrapper">
+
+  <!-- Reglas / Presupuesto -->
+  <section class="rules">
+    <div class="card">
+      <h3>Presupuesto</h3>
+      <div class="pair"><span class="badge">Tope</span> $ 100.000</div>
+      <div class="pair"><span class="badge">Entrega</span> Viernes de Amigo Secreto PyVM</div>
+    </div>
+  </section>
+
+  <!-- Persona 1 -->
+  <section class="person">
+    <div class="person-header">
+      <div>
+        <h2>JOAN SEBASTIAN SOSA BEDOYA</h2>
+    </div>
+
+    <div class="carousel" data-carousel>
+      <button class="arrow prev" aria-label="Anterior">❮</button>
+      <div class="carousel-viewport">
         <ul class="carousel-track">
-          <li class="carousel-slide">
-            <a href="https://www.arturocalle.com/polo-unicolor-premium-de-algodon-para-hombre-46433/p?skuId=138235" target="_blank">
-              <img src="Camibuzo.webp" alt="Camibuzo" style="width:500px;">
-            </a>
-            <div>
+          <!-- Slide 1 -->
+          <li class="slide">
+            <div class="product">
+              <a href="https://www.chevignon.com.co/camiseta-polo-slim-fit-cuello-neru-para-hombre-602g002-azu193924/p?skuId=1131363896" target="_blank" rel="noopener">
+                <img src="Fotos/camiseta.webp" alt="Camiseta Polo Slim Fit Cuello Nerú para Hombre"/>
+              </a>
+            </div>
+            <div class="info">
+              <h3>Polo unicolor premium</h3>
+              <p class="hideable price"> Talla: M</p>
+              <p class="hideable price">$ 112.425</p>
+              <div class="actions">
+                <a class="btn" href="https://www.chevignon.com.co/camiseta-polo-slim-fit-cuello-neru-para-hombre-602g002-azu193924/p?skuId=1131363896" target="_blank" rel="noopener">Ver en tienda</a>
+              </div>
             </div>
           </li>
-          <li class="carousel-slide">
-            <img src="Camibuzo1.webp" alt="Otro Camibuzo" style="width:500px;">
-            <div>
+          <!-- Slide 2 -->
+          <li class="slide">
+            <div class="product">
+              <a href="https://www.americanino.com/polo-slim-con-bordado-para-hombre-808g030-azu194020/p" target="_blank" rel="noopener">
+                <img src="Fotos/polo.webp" alt="Polo Slim con bordado para hombre"/>
+              </a>
+            </div>
+            <div class="info">
+              <h3>Polo Slim con bordado para hombre</h3>
+              <p class="hideable price"> Talla: M</p>
+              <p class="hideable price">$ 72.207</p>
+              <div class="actions">
+                <a class="btn" href="https://www.americanino.com/polo-slim-con-bordado-para-hombre-808g030-azu194020/p" target="_blank" rel="noopener">Ver en tienda</a>
+              </div>
             </div>
           </li>
-          <li class="carousel-slide">
-            <img src="Camibuzo2.webp" alt="Otro Camibuzo 3" style="width:500px;">
-            <div>
+          <!-- Slide 3 -->
+          <li class="slide">
+            <div class="product">
+              <a href="https://www.chevignon.com.co/camiseta-polo-m-c-600a000-neg194007/p?skuId=2134291" target="_blank" rel="noopener">
+                <img src="Fotos/polo4.webp" alt="Polo Slim con bordado para hombre"/>
+              </a>
+            </div>
+            <div class="info">
+              <h3>Camiseta Polo M/C</h3>
+              <p class="hideable price"> Talla: M</p>
+              <p class="hideable price">$ 101.940</p>
+              <div class="actions">
+                <a class="btn" href="https://www.chevignon.com.co/camiseta-polo-m-c-600a000-neg194007/p?skuId=2134291" target="_blank" rel="noopener">Ver en tienda</a>
+              </div>
             </div>
           </li>
         </ul>
       </div>
-    <p>Precio del Producto: $ 89.900</p>
-    <p>Colores que me pueden dar:</p>
-        <p>Esmeralda</p>
-        <p>Azul Marino</p>
-        <p>Tabaco</p>
-      <button class="next">&#10095;</button>
+      <button class="arrow next" aria-label="Siguiente">❯</button>
+      <div class="dots" aria-hidden="true"></div>
     </div>
   </section>
 
-  <br><br><br>
-  <h3>ALEJANDRO LOPEZ AGUIRRE</h3>
-
-  <section id="proyectos" class="container">
-    <div class="carousel">
-      <button class="prev">&#10094;</button>
-      <div class="carousel-track-container">
+  <!-- Persona 1 -->
+  <section class="person">
+    <div class="person-header">
+      <div>
+        <h2>JOAN SEBASTIAN SOSA BEDOYA</h2>
+    </div>
+    <div class="carousel" data-carousel>
+      <button class="arrow prev" aria-label="Anterior">❮</button>
+      <div class="carousel-viewport">
         <ul class="carousel-track">
-          <li class="carousel-slide">
-            <h3>Tienda donde lo puede encontrar: arturocalle</h3>
-            <h4>Talla: M</h4>
-            <a href="https://www.arturocalle.com/camiseta-en-algodon-para-hombre-13858/p?skuId=129425" target="_blank">
-              <img src="739971-1200-1600.webp" alt="Camibuzo" style="width:500px;">
-            </a>
-            <div>
-                <p>Camiseta en Algodón para Hombre</p>
-                <p>Precio del Producto: $ 69.900</p>
+          <!-- Slide 1 -->
+          <li class="slide">
+            <div class="product">
+              <a href="https://www.chevignon.com.co/camiseta-polo-slim-fit-cuello-neru-para-hombre-602g002-azu193924/p?skuId=1131363896" target="_blank" rel="noopener">
+                <img src="Fotos/camiseta.webp" alt="Camiseta Polo Slim Fit Cuello Nerú para Hombre"/>
+              </a>
+            </div>
+            <div class="info">
+              <h3>Polo unicolor premium</h3>
+              <p class="hideable price"> Talla: M</p>
+              <p class="hideable price">$ 112.425</p>
+              <div class="actions">
+                <a class="btn" href="https://www.chevignon.com.co/camiseta-polo-slim-fit-cuello-neru-para-hombre-602g002-azu193924/p?skuId=1131363896" target="_blank" rel="noopener">Ver en tienda</a>
+              </div>
             </div>
           </li>
-          <li class="carousel-slide">
-            <h3>Tienda donde lo puede encontrar: SEVENSEVEN</h3>
-            <h4>Talla: M</h4>
-            <img src="Camisetas-polo-para-hombre-45110903-30179_1.jpg" alt="Otro Camibuzo" style="width:500px;">
-            <div>
-                <p>Polo Sport Binado En Contraste Neutro</p>
-                <p>Precio del Producto: $ 79.900</p>
+          <!-- Slide 2 -->
+          <li class="slide">
+            <div class="product">
+              <a href="https://www.americanino.com/polo-slim-con-bordado-para-hombre-808g030-azu194020/p" target="_blank" rel="noopener">
+                <img src="Fotos/polo.webp" alt="Polo Slim con bordado para hombre"/>
+              </a>
+            </div>
+            <div class="info">
+              <h3>Polo Slim con bordado para hombre</h3>
+              <p class="hideable price"> Talla: M</p>
+              <p class="hideable price">$ 72.207</p>
+              <div class="actions">
+                <a class="btn" href="https://www.americanino.com/polo-slim-con-bordado-para-hombre-808g030-azu194020/p" target="_blank" rel="noopener">Ver en tienda</a>
+              </div>
             </div>
           </li>
-          <li class="carousel-slide">
-            <img src="D_NQ_NP_979941-MCO90909603412_082025-O.webp" alt="Otro Camibuzo 3" style="width:500px;">
-             <div>
-                <p>Creatina Ultra Pure 100% Iron 500 Gramos 100 Servicios</p>
-                <p>Precio del Producto: $89.900</p>
+          <!-- Slide 3 -->
+          <li class="slide">
+            <div class="product">
+              <a href="https://www.chevignon.com.co/camiseta-polo-m-c-600a000-neg194007/p?skuId=2134291" target="_blank" rel="noopener">
+                <img src="Fotos/polo4.webp" alt="Polo Slim con bordado para hombre"/>
+              </a>
+            </div>
+            <div class="info">
+              <h3>Camiseta Polo M/C</h3>
+              <p class="hideable price"> Talla: M</p>
+              <p class="hideable price">$ 101.940</p>
+              <div class="actions">
+                <a class="btn" href="https://www.chevignon.com.co/camiseta-polo-m-c-600a000-neg194007/p?skuId=2134291" target="_blank" rel="noopener">Ver en tienda</a>
+              </div>
             </div>
           </li>
         </ul>
       </div>
-   
-      <button class="next">&#10095;</button>
+      <button class="arrow next" aria-label="Siguiente">❯</button>
+      <div class="dots" aria-hidden="true"></div>
     </div>
   </section>
+  <!-- Persona 2 -->
+  <section class="person">
+    <div class="person-header">
+      <div>
+        <h2>ALEJANDRO LÓPEZ AGUIRRE</h2>
+        <div class="meta">Camiseta/T-shirt – Talla M</div>
+        <div class="tags">
+          <span class="badge">Básicos algodón</span>
+          <span class="badge">Deportiva</span>
+          <span class="badge">Suplemento</span>
+        </div>
+      </div>
+      <span class="badge ghost">Wishlist</span>
+    </div>
+
+    <div class="carousel" data-carousel>
+      <button class="arrow prev" aria-label="Anterior">❮</button>
+      <div class="carousel-viewport">
+        <ul class="carousel-track">
+          <!-- Slide 1 -->
+          <li class="slide">
+            <div class="product">
+              <a href="https://www.arturocalle.com/camiseta-en-algodon-para-hombre-13858/p?skuId=129425" target="_blank" rel="noopener">
+                <img src="739971-1200-1600.webp" alt="Camiseta algodón Arturo Calle"/>
+              </a>
+            </div>
+            <div class="info">
+              <h3>Camiseta en algodón</h3>
+              <p class="hideable price">$ 69.900</p>
+              <p class="colors">Básicos: negro, blanco, gris</p>
+              <div class="actions">
+                <a class="btn" href="https://www.arturocalle.com/camiseta-en-algodon-para-hombre-13858/p?skuId=129425" target="_blank" rel="noopener">Ver en tienda</a>
+                <button class="btn ghost" data-copy="https://www.arturocalle.com/camiseta-en-algodon-para-hombre-13858/p?skuId=129425">Copiar link</button>
+              </div>
+            </div>
+          </li>
+          <!-- Slide 2 -->
+          <li class="slide">
+            <div class="product">
+              <img src="Camisetas-polo-para-hombre-45110903-30179_1.jpg" alt="Polo sport SEVENSEVEN"/>
+            </div>
+            <div class="info">
+              <h3>Polo sport (SEVENSEVEN)</h3>
+              <p class="hideable price">$ 79.900</p>
+              <p class="colors">Bicolor con contraste neutro</p>
+              <div class="actions">
+                <button class="btn ghost" disabled>Sin link</button>
+              </div>
+            </div>
+          </li>
+          <!-- Slide 3 -->
+          <li class="slide">
+            <div class="product">
+              <img src="D_NQ_NP_979941-MCO90909603412_082025-O.webp" alt="Creatina Iron 500g"/>
+            </div>
+            <div class="info">
+              <h3>Creatina Ultra Pure 500g</h3>
+              <p class="hideable price">$ 89.900</p>
+              <p class="colors">Uso deportivo (confirmar marca)</p>
+              <div class="actions">
+                <button class="btn ghost" disabled>Confirmar marca</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button class="arrow next" aria-label="Siguiente">❯</button>
+      <div class="dots" aria-hidden="true"></div>
+    </div>
+  </section>
+</div>
 
 <script>
-  // Recorre todos los carruseles de la página
-  document.querySelectorAll('.carousel').forEach((carousel) => {
+  // -------- Confetti (desactivado por defecto; se activa con "sorpresa") ----------
+  (function(){
+    const c = document.getElementById('confetti');
+    const ctx = c.getContext('2d');
+    let W,H,parts=[];
+    const N=120;
+    function resize(){W= c.width = innerWidth; H= c.height = innerHeight;}
+    addEventListener('resize', resize); resize();
+    function spawn(){
+      parts = Array.from({length:N},()=>({
+        x: Math.random()*W, y: -Math.random()*H,
+        r: 2+Math.random()*3, vy: 1+Math.random()*3, vx:(Math.random()-.5)*1.2,
+        a: Math.random()*Math.PI*2, va: (Math.random()-.5)*0.2,
+        clr: ['#fbbf24','#60a5fa','#ef4444','#22c55e'][Math.floor(Math.random()*4)]
+      }));
+    }
+    function draw(){
+      ctx.clearRect(0,0,W,H);
+      for(const p of parts){
+        p.x+=p.vx; p.y+=p.vy; p.a+=p.va;
+        if(p.y>H+10) p.y=-10;
+        ctx.save();
+        ctx.translate(p.x,p.y);
+        ctx.rotate(p.a);
+        ctx.fillStyle=p.clr;
+        ctx.fillRect(-p.r,-p.r,p.r*2,p.r*2);
+        ctx.restore();
+      }
+      requestAnimationFrame(draw);
+    }
+    spawn(); draw();
+    c.style.display='none';
+    window._confettiToggle = (on)=>{ c.style.display = on ? 'block' : 'none'; }
+  })();
+  // -------- Carruseles múltiples ----------
+  document.querySelectorAll('[data-carousel]').forEach((carousel)=>{
     const track = carousel.querySelector('.carousel-track');
     const slides = Array.from(track.children);
-    const nextBtn = carousel.querySelector('.next');
-    const prevBtn = carousel.querySelector('.prev');
+    const next = carousel.querySelector('.next');
+    const prev = carousel.querySelector('.prev');
+    const dotsWrap = carousel.querySelector('.dots');
     let index = 0;
 
-    function update() {
-      const slideWidth = slides[0].getBoundingClientRect().width;
-      track.style.transform = `translateX(-${slideWidth * index}px)`;
+    // Dots
+    slides.forEach((_,i)=>{
+      const d=document.createElement('button');
+      d.className='dot'; d.setAttribute('aria-label','Ir al ítem '+(i+1));
+      d.addEventListener('click',()=>{ index=i; update(); });
+      dotsWrap.appendChild(d);
+    });
+
+    function viewportW(){ return carousel.querySelector('.carousel-viewport').getBoundingClientRect().width; }
+    function update(){
+      track.style.transform = `translateX(-${viewportW()*index}px)`;
+      dotsWrap.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active', i===index));
     }
+    function nextSlide(){ index = (index+1)%slides.length; update(); }
+    function prevSlide(){ index = (index-1+slides.length)%slides.length; update(); }
 
-    nextBtn.addEventListener('click', () => {
-      index = (index + 1) % slides.length;
-      update();
-    });
-
-    prevBtn.addEventListener('click', () => {
-      index = (index - 1 + slides.length) % slides.length;
-      update();
-    });
-
+    next.addEventListener('click', nextSlide);
+    prev.addEventListener('click', prevSlide);
     window.addEventListener('resize', update);
-    update(); // posición inicial
+    update();
+
+    // Teclado
+    carousel.tabIndex = 0;
+    carousel.addEventListener('keydown', (e)=>{
+      if(e.key==='ArrowRight') nextSlide();
+      if(e.key==='ArrowLeft') prevSlide();
+    });
+
+    // Copiar link
+    carousel.addEventListener('click', async (e)=>{
+      const btn = e.target.closest('[data-copy]');
+      if(!btn) return;
+      const url = btn.getAttribute('data-copy');
+      try{
+        await navigator.clipboard.writeText(url);
+        btn.textContent='¡Copiado!';
+        setTimeout(()=>btn.textContent='Copiar link',1200);
+      }catch(_){
+        btn.textContent='No se pudo copiar';
+        setTimeout(()=>btn.textContent='Copiar link',1200);
+      }
+    });
+
+    // Revelar con click cuando está en sorpresa
+    carousel.addEventListener('click', (e)=>{
+      if(!carousel.classList.contains('surprise')) return;
+      if(!e.target.closest('.slide')) return;
+      carousel.classList.toggle('revealed');
+      window._confettiToggle(carousel.classList.contains('surprise') && !carousel.classList.contains('revealed'));
+    });
   });
 </script>
-
 </body>
 </html>

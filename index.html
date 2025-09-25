@@ -9,7 +9,7 @@
 <body>
   <h1>Amigo secreto</h1>
   <h2>Planeación y Verificación del mantenimiento</h2>
-  <h3>Joan Sebastian Sosa Beodya</h3>
+  <h3>JOAN SEBASTIAN SOSA BEDOYA</h3>
 
   <section id="proyectos" class="container">
     <h2>Camibuzo</h2>
@@ -38,7 +38,7 @@
           </li>
         </ul>
       </div>
-    <p>Precio del Producto $ 89.900</p>
+    <p>Precio del Producto: $ 89.900</p>
     <p>Colores que me pueden dar:</p>
         <p>Esmeralda</p>
         <p>Azul Marino</p>
@@ -47,27 +47,76 @@
     </div>
   </section>
 
-  <script>
-    const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    const nextButton = document.querySelector('.next');
-    const prevButton = document.querySelector('.prev');
-    let currentIndex = 0;
+  <br><br><br>
+  <h3>ALEJANDRO LOPEZ AGUIRRE</h3>
 
-    function updateSlide(index) {
+  <section id="proyectos" class="container">
+    <div class="carousel">
+      <button class="prev">&#10094;</button>
+      <div class="carousel-track-container">
+        <ul class="carousel-track">
+          <li class="carousel-slide">
+            <h3>Tienda donde lo puede encontrar: arturocalle</h3>
+            <h4>Talla: M</h4>
+            <a href="https://www.arturocalle.com/camiseta-en-algodon-para-hombre-13858/p?skuId=129425" target="_blank">
+              <img src="739971-1200-1600.webp" alt="Camibuzo" style="width:500px;">
+            </a>
+            <div>
+                <p>Camiseta en Algodón para Hombre</p>
+                <p>Precio del Producto: $ 69.900</p>
+            </div>
+          </li>
+          <li class="carousel-slide">
+            <h3>Tienda donde lo puede encontrar: SEVENSEVEN</h3>
+            <h4>Talla: M</h4>
+            <img src="Camisetas-polo-para-hombre-45110903-30179_1.jpg" alt="Otro Camibuzo" style="width:500px;">
+            <div>
+                <p>Polo Sport Binado En Contraste Neutro</p>
+                <p>Precio del Producto: $ 79.900</p>
+            </div>
+          </li>
+          <li class="carousel-slide">
+            <img src="D_NQ_NP_979941-MCO90909603412_082025-O.webp" alt="Otro Camibuzo 3" style="width:500px;">
+             <div>
+                <p>Creatina Ultra Pure 100% Iron 500 Gramos 100 Servicios</p>
+                <p>Precio del Producto: $89.900</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+   
+      <button class="next">&#10095;</button>
+    </div>
+  </section>
+
+<script>
+  // Recorre todos los carruseles de la página
+  document.querySelectorAll('.carousel').forEach((carousel) => {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextBtn = carousel.querySelector('.next');
+    const prevBtn = carousel.querySelector('.prev');
+    let index = 0;
+
+    function update() {
       const slideWidth = slides[0].getBoundingClientRect().width;
-      track.style.transform = 'translateX(-' + (slideWidth * index) + 'px)';
+      track.style.transform = `translateX(-${slideWidth * index}px)`;
     }
 
-    nextButton.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      updateSlide(currentIndex);
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      update();
     });
 
-    prevButton.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      updateSlide(currentIndex);
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      update();
     });
-  </script>
+
+    window.addEventListener('resize', update);
+    update(); // posición inicial
+  });
+</script>
+
 </body>
 </html>

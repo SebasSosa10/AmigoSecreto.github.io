@@ -1,42 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-        <link rel="stylesheet" href="CSS/stile.css" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrusel Centrado</title>
+  <link rel="stylesheet" href="stile.css">
 </head>
-<body class="head">
-    <h1 style ="margin-left: 30px; line-height: 1.8">Amigo secreto</h1>
+<body>
+  <h1>Amigo secreto</h1>
+  <h2>Planeación y Verificación del mantenimiento</h2>
+  <h3>Joan Sebastian Sosa Beodya</h3>
 
-    <h2>Planeacion y Verificacion del mantenimieont </h2>
-
-    <h3>Joan Sebastian Sosa Beodya</h3>
-    <section id="proyectos" class="container">
-        <h2>Camibuzo</h2>
-        <div class="carousel">
-            <button class="prev">&#10094;</button>
-            <div class="carousel-track-container">
-                <ul class="carousel-track">
-                        <div class="proyecto">
-                            <span style="color: greenyellow;">•</span>
-                            <a href="https://www.arturocalle.com/polo-unicolor-premium-de-algodon-para-hombre-46433/p?skuId=138235" target="_blank">
-                                <img src="Camibuzo.webp" style="width: 500px;" alt="GitHub">
-                            </a>
-                            <p>Precio del Producto $ 89.900
-
-                            </p>
-                            <div id="proye">
-                                <p>Colores que me pueden dar: </p>
-                                <p>Tabaco</p>
-                                <p>Azul Marino</p>
-                            </div>
-                        </div>
-                </ul>
+  <section id="proyectos" class="container">
+    <h2>Camibuzo</h2>
+    <h3>Tienda donde lo puede encontrar: Arturo Calle</h3>
+    <h4>Talla: M</h4>
+    <div class="carousel">
+      <button class="prev">&#10094;</button>
+      <div class="carousel-track-container">
+        <ul class="carousel-track">
+          <li class="carousel-slide">
+            <a href="https://www.arturocalle.com/polo-unicolor-premium-de-algodon-para-hombre-46433/p?skuId=138235" target="_blank">
+              <img src="Camibuzo.webp" alt="Camibuzo" style="width:500px;">
+            </a>
+            <div>
             </div>
-            <button class="next">&#10095;</button>
-        </div>
-    </section>
+          </li>
+          <li class="carousel-slide">
+            <img src="Camibuzo1.webp" alt="Otro Camibuzo" style="width:500px;">
+            <div>
+            </div>
+          </li>
+          <li class="carousel-slide">
+            <img src="Camibuzo2.webp" alt="Otro Camibuzo 3" style="width:500px;">
+            <div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    <p>Precio del Producto $ 89.900</p>
+    <p>Colores que me pueden dar:</p>
+        <p>Esmeralda</p>
+        <p>Azul Marino</p>
+        <p>Tabaco</p>
+      <button class="next">&#10095;</button>
+    </div>
+  </section>
+
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.next');
+    const prevButton = document.querySelector('.prev');
+    let currentIndex = 0;
+
+    function updateSlide(index) {
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      track.style.transform = 'translateX(-' + (slideWidth * index) + 'px)';
+    }
+
+    nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlide(currentIndex);
+    });
+
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlide(currentIndex);
+    });
+  </script>
 </body>
 </html>

@@ -1,20 +1,69 @@
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    top: 20px;
-    position: relative;
-    z-index: 1;
+/* Centrar todo el contenido */
+body {
+  display: flex;
+  flex-direction: column; /* títulos arriba */
+  justify-content: center; /* centra horizontal si hay flex */
+  align-items: center; /* centra vertical */
+  min-height: 100vh; /* ocupa toda la altura */
+  margin: 0;
+  background-color: #f5f5f5; /* opcional */
 }
-header {
-    display: flex;
-    color: white;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+
+/* Centrar títulos */
+h1, h2, h3 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Carrusel */
+.carousel {
+  position: relative;
+  width: 520px; /* ancho del carrusel */
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.carousel button.prev,
+.carousel button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+  font-size: 24px;
+}
+
+.carousel button.prev {
+  left: 0;
+}
+
+.carousel button.next {
+  right: 0;
 }
